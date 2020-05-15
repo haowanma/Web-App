@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="
+    width=device-width, 
+      user-scalable=no,
+      initial-scale=1.0, 
+      minimum-scale=1.0, 
+      maximum-scale=1,0">
+  <link rel="stylesheet/less" href="../css/index2.less">
+  <title>Web App</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="info">
+        <div class="avatar">
+          <img src="../images/avatar.jpg">
+        </div>
+        <div class="subtitle">
+          <ul>
+            <li class="li-1">
+              <i class="brand"></i>
+              <span>粥品香坊(大运村)</span>
+            </li>
+            <li class="desc">
+              <span>蜂鸟专送/38分钟送达</span>
+            </li>
+            <li class="support">
+              <i class="decrease"></i>
+              <span>在线支付满28减5,满50减10</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="notice"></div>
+    <nav></nav>
+  </div>
+</body>
+
+<script src="../js/less.js"></script>
+
+<script>
+  (function () {
+    // 设计图尺寸
+    var designW = 750;
+    // 理想视口尺寸
+    var idealW = document.documentElement.clientWidth;
+    // 缩放比例
+    var scale = idealW / designW;
+    // 拿到viewport标签
+    var metaNode = document.querySelector("meta[name='viewport']");
+
+    metaNode.content = `user-scalable=no,initial-scale=${scale},minimum-scale=${scale},maximum-scale=${scale}`
+  })()
+</script>
+
+</html>

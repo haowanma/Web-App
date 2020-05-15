@@ -1,0 +1,114 @@
+.bg(@url){
+  background-image: url("@{url}@2x.png");
+  @media only screen and (-webkit-device-pixel-ratio: 3){
+    background-image: url("@{url}@3x.png");
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+ul,li{
+  list-style: none;
+}
+
+img{
+  display: block;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // background: pink;
+  header{
+    padding-top: 24px;
+    padding-left: 24px;
+    width: 100%;
+    height: 82px;
+    background-color: rgba(7, 17, 27, .5);
+    // filter: blur(10px);
+    color: rgb(255, 255, 255);
+    .info{
+      overflow: hidden;
+      .avatar{
+        float: left;
+        width: 64px;
+        height: 64px;
+        margin-right: 16px;
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 2px;
+        }
+      }
+      .subtitle{
+        float: left;
+        ul{
+          .li-1{
+            overflow: hidden;
+            margin-top: 2px;
+            margin-bottom: 8px;
+            .brand{
+              float: left;
+              // display: inline-block;
+              width: 30px;
+              height: 18px;
+              margin-right: 6px;
+              // background-image: url(../images/brand@2x.png);
+              .bg("../images/brand");
+              background-size: 100%;
+            }
+            span{
+              float: left;
+              font-size: 16px;
+              font-weight: bold;
+              line-height: 18px;
+            }
+          }
+          .desc{
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 12px;
+            margin-bottom: 10px;
+          }
+          .support{
+            font-size: 10px;
+            font-weight: 200;
+            line-height: 12px;
+            .decrease{
+              float: left;
+              width: 12px;
+              height: 12px;
+              margin-right: 4px;
+              // background-image: url(../images/decrease_1@2x.png);
+              .bg("../images/decrease_1");
+              background-size: 100%;
+            }
+            span{
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notice{
+    width: 100%;
+    height: 28px;
+    background-color: rgba(7, 17, 27, .2);
+  }
+  nav{
+    width: 100%;
+    height: 40px;
+    background-color: green;
+  }
+}
